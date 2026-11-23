@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#14251b">
+
+<title>Cutitar Groenvoorziening | Oosterhout</title>
+<meta name="description" content="Cutitar Groenvoorziening uit Oosterhout. Professioneel groenonderhoud, maaien, snoeien en samenwerking als onderaannemer.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --green: #14251b;
+  --green2: #203d2b;
+  --orange: #e58b35;
+  --cream: #f5f5ef;
+  --white: #fff;
+  --muted: #aab7ad;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--green);
+  line-height: 1.6;
+}
+
+a { text-decoration: none; color: inherit; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  color: white;
+  padding: 20px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.logo-icon {
+  background: var(--orange);
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  font-size: 25px;
+}
+
+.logo small {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: #d5ded6;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.nav-links a:hover { color: var(--orange); }
+
+.nav-cta {
+  background: var(--orange);
+  padding: 12px 18px;
+  border-radius: 4px;
+  color: white;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: white;
+  font-size: 28px;
+}
+
+.hero {
+  min-height: 720px;
+  height: 90vh;
+  max-height: 900px;
+  display: flex;
+  align-items: center;
+  color: white;
+  background:
+    linear-gradient(90deg, rgba(10,25,15,.94), rgba(10,25,15,.42)),
+    url('https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=2000&q=85') center/cover;
+}
+
+.hero-content { max-width: 760px; padding-top: 60px; }
+
+.eyebrow {
+  color: var(--orange);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 12px;
+  font-weight: 800;
+  margin-bottom: 22px;
+}
+
+h1, h2, h3 {
+  font-family: 'Manrope', sans-serif;
+}
+
+h1 {
+  font-size: clamp(43px, 8vw, 82px);
+  line-height: 1.06;
+  letter-spacing: -3px;
+}
+
+h1 span { color: var(--orange); }
+
+.hero p {
+  max-width: 570px;
+  color: #d4ded5;
+  margin: 25px 0 32px;
+  font-size: 17px;
+}
+
+.buttons { display: flex; gap: 13px; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block;
+  padding: 15px 22px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.btn-primary { background: var(--orange); color: white; }
+.btn-primary:hover { background: #c87325; transform: translateY(-2px); }
+
+.btn-outline { border: 1px solid #ffffff80; color: white; }
+.btn-outline:hover { background: white; color: var(--green); }
+
+.stats {
+  background: var(--green);
+  color: white;
+  padding: 35px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.stat strong {
+  display: block;
+  color: var(--orange);
+  font-family: 'Manrope', sans-serif;
+  font-size: 29px;
+}
+
+.stat span { color: #c4d0c6; font-size: 13px; }
+
+section { padding: 95px 0; }
+
+.section-label {
+  color: var(--orange);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+.section-title {
+  font-size: clamp(30px, 5vw, 48px);
+  line-height: 1.15;
+  letter-spacing: -1.5px;
+}
+
+.section-description {
+  color: #69766c;
+  max-width: 650px;
+  margin-top: 18px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-image {
+  min-height: 440px;
+  border-radius: 7px;
+  background: url('https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=1000&q=85') center/cover;
+}
+
+.about-text p { color: #69766c; margin-top: 18px; }
+
+.services { background: #e9ece4; }
+
+.services-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 17px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: .3s;
+}
+
+.service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px #00000012;
+}
+
+.service-card img {
+  width: 100%;
+  height: 175px;
+  object-fit: cover;
+  display: block;
+}
+
+.service-info { padding: 20px; }
+
+.service-info h3 { font-size: 17px; margin-bottom: 8px; }
+.service-info p { color: #758077; font-size: 13px; }
+
+.cooperation {
+  background: var(--green);
+  color: white;
+}
+
+.cooperation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cooperation .section-description { color: #bdc9bf; }
+
+.cooperation-image {
+  height: 440px;
+  border-radius: 7px;
+  background: url('https://images.unsplash.com/photo-1599685315640-5ec1e2fbe8a6?auto=format&fit=crop&w=1000&q=85') center/cover;
+}
+
+.check-list {
+  list-style: none;
+  margin: 25px 0;
+}
+
+.check-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ffffff20;
+  color: #dce5dd;
+}
+
+.check-list li::before {
+  content: "✓";
+  color: var(--orange);
+  margin-right: 12px;
+  font-weight: 800;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">
+        <span class="logo-icon">C</span>
+        <span>CUTITAR<small>GROENVOORZIENING</small></span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Menu openen">☰</button>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#over">Over ons</a>
+        <a href="#diensten">Diensten</a>
+        <a href="#samenwerken">Samenwerken</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Groenvoorziening • Oosterhout</div>
+      <h1>Uw partner in <span>professioneel</span> groenonderhoud.</h1>
+      <p>
+        Betrouwbare groenvoorziening, vakkundige uitvoering
+        en flexibele capaciteit voor bedrijven, aannemers
+        en openbare ruimtes.
+      </p>
+      <div class="buttons">
+        <a href="#contact" class="btn btn-primary">Vraag een offerte aan</a>
+        <a href="#samenwerken" class="btn btn-outline">Samenwerken</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="container stats-grid">
+    <div class="stat">
+      <strong>6+</strong>
+      <span>Inzetbare medewerkers</span>
+    </div>
+    <div class="stat">
+      <strong>Eigen</strong>
+      <span>Machines en vervoer</span>
+    </div>
+    <div class="stat">
+      <strong>100 km</strong>
+      <span>Werkgebied rondom Oosterhout</span>
+    </div>
+  </div>
+</div>
+
+<section id="over">
+  <div class="container about-grid">
+    <div class="about-image"></div>
+    <div class="about-text">
+      <div class="section-label">Over Cutitar</div>
+      <h2 class="section-title">Een betrouwbare partner voor iedere groenklus.</h2>
+      <p>
+        Cutitar Groenvoorziening VOF is gevestigd in Oosterhout
+        en richt zich op professionele groenvoorziening en
+        groenonderhoud.
+      </p>
+      <p>
+        Met meer dan 6 inzetbare medewerkers, eigen machines
+        en eigen vervoer kunnen wij uiteenlopende werkzaamheden
+        uitvoeren voor zakelijke opdrachtgevers.
+      </p>
+      <p>
+        Wij staan open voor samenwerking met aannemers,
+        groenbedrijven en andere professionele opdrachtgevers.
+      </p>
+      <a href="#contact" class="btn btn-primary" style="margin-top:25px">
+        Neem contact op
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="diensten">
+  <div class="container">
+    <div class="services-heading">
+      <div>
+        <div class="section-label">Onze werkzaamheden</div>
+        <h2 class="section-title">Alles voor een verzorgde buitenruimte.</h2>
+      </div>
+    </div>
+
+    <div class="service-grid">
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1599685315640-5ec1e2fbe8a6?auto=format&fit=crop&w=700&q=80" alt="Professioneel groenonderhoud">
+        <div class="service-info">
+          <h3>Groenonderhoud</h3>
+          <p>Onderhoud van groenvoorzieningen en openbare ruimtes.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&w=700&q=80" alt="Gras maaien">
+        <div class="service-info">
+          <h3>Maaien</h3>
+          <p>Gras-, berm- en terreinonderhoud voor diverse locaties.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=700&q=80" alt="Heggen snoeien">
+        <div class="service-info">
+          <h3>Snoeiwerk</h3>
+          <p>Het professioneel snoeien en onderhouden van beplanting.</p>
+        </div>
+      </article>
+
+      <article class="service-card">
+        <img src="https://images.unsplash.com/photo-1589923188900-85dae523342b?auto=format&fit=crop&w=700&q=80" alt="Plantsoenonderhoud">
+        <div class="service-info">
+          <h3>Plantsoenonderhoud</h3>
+          <p>Verzorging van plantsoenen, groenstroken en terreinen.</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="cooperation" id="samenwerken">
+  <div class="container cooperation-grid">
+    <div>
+      <div class="section-label">Voor bedrijven en aannemers</div>
+      <h2 class="section-title">Op zoek naar extra capaciteit voor uw groenproject?</h2>
+      <p class="section-description">
+        Cutitar Groenvoorziening staat open voor samenwerking
+        met aannemers, groenbedrijven en zakelijke opdrachtgevers.
+        Wij kunnen worden ingezet voor projectmatig werk en
+        terugkerend groenonderhoud.
+      </p>
+
+      <ul class="check-list">
+        <li>Meer dan 6 inzetbare medewerkers</li>
+        <li>Eigen machines en vervoer</li>
+        <li>Flexibele inzet van een groenploeg</li>
+        <li>Werkzaamheden in een straal van circa 100 km</li>
+        <li>Open voor structurele samenwerking</li>
+      </ul>
+
+      <a href="#contact" class="btn btn-primary">
+        Bespreek een samenwerking
+      </a>
+    </div>
+
+    <div class="cooperation-image"></div>
+  </div>
+</section>
+
+<section id="projecten">
+  <div class="container">
+    <div class="section-label">Impressie</div>
+    <h2 class="section-title">Werk in het groen.</h2>
+    <p class="section-description">
+      Een indruk van de werkzaamheden en het type projecten
+      waarop Cutitar zich richt. Vervang deze voorbeeldfoto's
+      door eigen projectfoto's.
+    </p>
+
+    <div class="project-grid">
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=800&q=80" alt="Groenonderhoud">
+        <div class="project-label">Groenonderhoud</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1592919505780-303950717480?auto=format&fit=crop&w=800&q=80" alt="Maaien">
+        <div class="project-label">Maaien en terreinbeheer</div>
+      </div>
+      <div class="project">
+        <img src="https://images.unsplash.com/photo-1622383563227-04401ab4e5ea?auto=format&fit=crop&w=800&q=80" alt="Snoeiwerk">
+        <div class="project-label">Snoeiwerk</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+    <div>
+      <div class="section-label">Contact</div>
+      <h2 class="section-title">Laten we samenwerken.</h2>
+      <p class="section-description">
+        Heeft u een project, zoekt u extra capaciteit of wilt u
+        kennismaken? Neem vrijblijvend contact op met Cutitar.
+      </p>
+
+      <div class="contact-details">
+        <div class="contact-item">
+          <strong>Bedrijfsnaam</strong>
+          <span>Cutitar Groenvoorziening VOF</span>
+        </div>
+        <div class="contact-item">
+          <strong>Locatie</strong>
+          <span>Oosterhout, Noord-Brabant</span>
+        </div>
+        <div class="contact-item">
+          <strong>Werkgebied</strong>
+          <span>Circa 100 km rondom Oosterhout</span>
+        </div>
+        <div class="contact-item">
+          <strong>E-mail</strong>
+          <a href="mailto:VUL-HIER-JULLIE-EMAIL-IN">VUL HIER JULLIE E-MAIL IN</a>
+        </div>
+        <div class="contact-item">
+          <strong>Telefoon</strong>
+          <span>Vul hier jullie telefoonnummer in</span>
+        </div>
+      </div>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <h3 style="font-size:23px;margin-bottom:22px">Stuur ons een bericht</h3>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">Naam *</label>
+          <input id="name" name="name" required placeholder="Uw naam">
+        </div>
+        <div class="form-group">
+          <label for="company">Bedrijf</label>
+          <input id="company" name="company" placeholder="Bedrijfsnaam">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">E-mailadres *</label>
+          <input id="email" name="email" type="email" required placeholder="naam@bedrijf.nl">
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefoonnummer</label>
+          <input id="phone" name="phone" type="tel" placeholder="Uw telefoonnummer">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="type">Waar gaat uw aanvraag over?</label>
+        <select id="type" name="type">
+          <option>Groenonderhoud</option>
+          <option>Onderaanneming</option>
+          <option>Maaien of bosmaaien</option>
+          <option>Snoeiwerk</option>
+          <option>Overige werkzaamheden</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Uw bericht *</label>
+        <textarea id="message" name="message" required placeholder="Vertel ons meer over uw project..."></textarea>
+      </div>
+
+      <button class="btn btn-primary" type="submit">Verstuur aanvraag</button>
+      <p id="formMessage" style="font-size:12px;color:#69766c;margin-top:12px"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <a href="#home" class="logo">
+        <span class="logo-icon">C</span>
+        <span>CUTITAR<small>GROENVOORZIENING</small></span>
+      </a>
+      <p style="color:#aab7ad;font-size:13px">
+        Professioneel groenonderhoud.<br>
+        Oosterhout en omgeving.
+      </p>
+    </div>
+    <p style="border-top:1px solid #ffffff20;padding-top:22px;color:#829087;font-size:12px">
+      © <span id="year"></span> Cutitar Groenvoorziening VOF. Alle rechten voorbehouden.
+    </p>
+  </div>
+</footer>
+</body>
+</html>
+
+<script>
+  // Mobile navigation
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('active');
+    });
+  });
+
+  // Automatic copyright year
+  document.getElementById('year').textContent =
+    new Date().getFullYear();
+
+  // Contact form
+  const form = document.getElementById('contactForm');
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const businessEmail = 'VUL-HIER-JULLIE-EMAIL-IN';
+
+    if (businessEmail.includes('VUL-HIER')) {
+      document.getElementById('formMessage').textContent =
+        'Vul eerst het zakelijke e-mailadres in de code in.';
+      return;
+    }
+
+    const data = new FormData(form);
+
+    const subject = encodeURIComponent(
+      'Nieuwe aanvraag via Cutitar website'
+    );
+
+    const body = encodeURIComponent(
+      'Naam: ' + data.get('name') + '\n' +
+      'Bedrijf: ' + data.get('company') + '\n' +
+      'E-mail: ' + data.get('email') + '\n' +
+      'Telefoon: ' + data.get('phone') + '\n' +
+      'Aanvraag: ' + data.get('type') + '\n\n' +
+      'Bericht:\n' + data.get('message')
+    );
+
+    window.location.href =
+      'mailto:' + businessEmail +
+      '?subject=' + subject +
+      '&body=' + body;
+  });
+</script>
+
+<style>
+  .nav-links.active {
+    display: flex;
+  }
+
+  @media (max-width: 850px) {
+    .nav-links {
+      display: none;
+      position: absolute;
+      top: 75px;
+      left: 5%;
+      width: 90%;
+      background: var(--green);
+      padding: 25px;
+      border-radius: 7px;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 20px;
+    }
+
+    .nav-links.active { display: flex; }
+
+    .menu-toggle { display: block; }
+
+    .about-grid,
+    .cooperation-grid,
+    .contact-grid {
+      grid-template-columns: 1fr;
+      gap: 35px;
+    }
+
+    .service-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-heading { display: block; }
+
+    .about-image { min-height: 330px; }
+
+    .cooperation-image { height: 330px; }
+
+    .project-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  @media (max-width: 520px) {
+    .hero { min-height: 700px; height: auto; }
+    h1 { letter-spacing: -1.5px; }
+    section { padding: 70px 0; }
+
+    .stats-grid { grid-template-columns: 1fr; gap: 25px; }
+
+    .service-grid,
+    .project-grid { grid-template-columns: 1fr; }
+
+    .service-card img { height: 220px; }
+
+    .form-row { grid-template-columns: 1fr; gap: 0; }
+
+    .contact-form { padding: 23px; }
+
+    .footer-content {
+      flex-direction: column;
+    }
+  }
+</style>
